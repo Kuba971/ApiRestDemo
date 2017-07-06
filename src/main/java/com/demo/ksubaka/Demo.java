@@ -1,33 +1,15 @@
 package com.demo.ksubaka;
 
-import java.lang.reflect.Type;
-import java.sql.Wrapper;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
-import javax.servlet.ServletResponseWrapper;
-import javax.xml.ws.ResponseWrapper;
-
-import org.apache.http.impl.client.HttpClients;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.junit.Test;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.client.ClientHttpRequestFactory;
-import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import com.demo.ksubaka.utils.MovieWrapper;
 import com.demo.ksubaka.utils.MusicWrapper;
 import com.demo.ksubaka.utils.TrackMatchWrapper;
 import com.demo.ksubaka.utils.TrackWrapper;
-import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 
 public class Demo {
 

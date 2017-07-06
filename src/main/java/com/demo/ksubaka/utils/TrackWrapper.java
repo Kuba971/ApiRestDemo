@@ -14,11 +14,6 @@ public class TrackWrapper {
 	@SerializedName(value="track")
 	public ArrayList<Music> musicList =  new ArrayList<Music>();
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public ArrayList<Music> getMusicList() {
 		return musicList;
 	}

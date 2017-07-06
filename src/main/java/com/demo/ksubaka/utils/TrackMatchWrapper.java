@@ -23,9 +23,4 @@ public class TrackMatchWrapper {
 		this.trackWrapper = trackWrapper;
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
