@@ -10,6 +10,7 @@ public class Movie {
     
     public String title; 
     
+    // Serialized name allows us to use the name of the Json and still have a understandable class. 
     @SerializedName("title_description")
     public String producer;
 

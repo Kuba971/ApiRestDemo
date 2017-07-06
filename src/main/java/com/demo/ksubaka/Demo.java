@@ -15,7 +15,7 @@ public class Demo {
 
 	@Test
 	public static void main(String[] args) {
-		
+		// If there is many arguments, we put them at the index 1 of the tab
 		if (args.length >= 2) {
 			for (int i = 2; i < args.length; i++) {
 				args[1] = args[1] + " " + args[i];
@@ -42,10 +42,12 @@ public class Demo {
 			String result = restTemplate.getForObject(uri, String.class);
 			Gson gson = new Gson();
 			if (movieBoolean) {
+				// We use the movie wrapper to adapt our class to the JSON form
 				MovieWrapper movieWrapper = gson.fromJson(result, MovieWrapper.class);
 				ArrayList<Movie> movieList = new ArrayList<Movie>();
 				movieList = movieWrapper.getMovieList();
 				for (Movie movie : movieList) {
+					// We are taking the result other than the movie type
 					if (!movie.getProducer().contains("TV") && !movie.getProducer().contains("series")
 							&& !movie.getProducer().contains("game") && !movie.getProducer().contains("documentary") && !movie.getProducer().contains("video")) {
 						String[] yearPart = movie.getProducer().split(",");
@@ -57,6 +59,7 @@ public class Demo {
 					}
 				}
 			} else if (musicBoolean) {
+				// We use couple of music wrapper to adapt our class to the JSON form
 				MusicWrapper musicWrapper = gson.fromJson(result, MusicWrapper.class);
 				TrackMatchWrapper trackMatchWrapper = new TrackMatchWrapper();
 				TrackWrapper trackWrapper = new TrackWrapper();
